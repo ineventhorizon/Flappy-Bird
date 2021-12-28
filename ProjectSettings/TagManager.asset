@@ -1,0 +1,60 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Pipes
+  - PointCollider
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Pipes
+  - Piperoot
+  - PointCollider
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4197162611
+    locked: 0
+  - name: Pipes
+    uniqueID: 2295920183
+    locked: 0
+  - name: Floor
+    uniqueID: 3493679777
+    locked: 0
+  - name: Bird
+    uniqueID: 1488615813
+    locked: 0
+  - name: UI
+    uniqueID: 1560516631
+    locked: 0
