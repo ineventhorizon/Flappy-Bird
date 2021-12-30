@@ -68,6 +68,9 @@ TextureImporter:
   - first:
       213: 327615150594053553
     second: rankings
+  - first:
+      213: -3928778856195974569
+    second: continueButton
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -606,7 +609,7 @@ TextureImporter:
         width: 57
         height: 32
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -614,6 +617,27 @@ TextureImporter:
       bones: []
       spriteID: 1b5d1326e3ceb8400800000000000000
       internalID: 327615150594053553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: continueButton
+      rect:
+        serializedVersion: 2
+        x: 411
+        y: 152
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75a9f53227c2a79c0800000000000000
+      internalID: -3928778856195974569
       vertices: []
       indices: 
       edges: []

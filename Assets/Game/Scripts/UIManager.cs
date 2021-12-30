@@ -9,6 +9,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject startCanvas;
     [SerializeField] private GameObject inGameCanvas;
     [SerializeField] private GameObject gameOverCanvas;
+    [SerializeField] private GameObject pauseCanvas;
     private static bool loadStartMenu = true;
     private void Awake()
     {
@@ -21,7 +22,6 @@ public class UIManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        startCanvas.SetActive(loadStartMenu);
     }
     void OnEnable()
     {
@@ -48,7 +48,7 @@ public class UIManager : MonoBehaviour
     {
         gameOverCanvas.SetActive(false);
         InGame(true);
-        Observer.replay?.Invoke();
+        Observer.replay?.Invoke(false);
     }
 
     public void GameOver()
@@ -58,6 +58,25 @@ public class UIManager : MonoBehaviour
         Observer.gameOverNotification?.Invoke();
     }
 
+    public void ReturnStartMenu()
+    {
+        loadStartMenu = true;
+        startCanvas.SetActive(loadStartMenu);
+        InGame(false);
+        Observer.replay?.Invoke(true);
+    }
 
+    public void Pause()
+    {
+        InGame(false);
+        pauseCanvas.SetActive(true);
+        Observer.pauseContinue?.Invoke(false);
+    }
 
+    public void Continue()
+    {
+        InGame(true);
+        pauseCanvas.SetActive(false);
+        Observer.pauseContinue?.Invoke(true);
+    }
 }

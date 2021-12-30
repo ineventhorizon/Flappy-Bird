@@ -10,7 +10,6 @@ public class Pipe : MonoBehaviour
         HandleLifeTime();
         MoveLeft();
     }
-
     void MoveLeft()
     {
         transform.position += (Vector3)Vector2.left * Time.deltaTime *pipeSpeed;
@@ -20,7 +19,4 @@ public class Pipe : MonoBehaviour
     {
         if (transform.position.x <= -1.2f) Destroy(gameObject);
     }
-
-    
-
 }

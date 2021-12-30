@@ -10,7 +10,6 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance => instance ?? (instance = FindObjectOfType<GameManager>());
     private void Awake()
     {
-
         if (instance != null)
         {
             Destroy(gameObject);
@@ -20,40 +19,48 @@ public class GameManager : MonoBehaviour
             instance = this;
             DontDestroyOnLoad(gameObject);
         }
-        
     }
 
     void OnEnable()
     {
         Observer.startGame += StartGame;
         Observer.replay += Replay;
+        Observer.pauseContinue += PauseOrContinue;
         Observer.gameOverNotification += GameOver;
     }
     void OnDisable()
     {
         Observer.startGame -= StartGame;
         Observer.replay -= Replay;
+        Observer.pauseContinue -= PauseOrContinue;
         Observer.gameOverNotification -= GameOver;
     }
     private void GameOver()
     {
         Time.timeScale = 0f;
-        Observer.resetScore?.Invoke();
+        Observer.updateScoreBoard?.Invoke();
         Debug.Log("GameOver");
     }
 
     private void StartGame()
     {
         Time.timeScale = 1f;
-        Observer.startGame -= StartGame;
     }
-    private void Pause()
+    //if True Continue, if False Pause
+    private void PauseOrContinue(bool status)
     {
-
+        Time.timeScale = status ? 1f : 0f;
     }
-    private void Replay()
+    private void Replay(bool loadStartMenu)
     {
-        Time.timeScale = 1f;
+        Time.timeScale = loadStartMenu ? 0f : 1f;
+        Observer.resetMedals?.Invoke();
+        Observer.resetScore?.Invoke();
         SceneManager.LoadScene(0);
+    }
+
+    public bool IsGameRunning()
+    {
+        return Time.timeScale == 0 ? false : true;
     }
 }

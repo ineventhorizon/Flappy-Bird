@@ -5,6 +5,7 @@ using UnityEngine;
 public class PipeRootControl : MonoBehaviour
 {
     [SerializeField] private float sensitivity = 0.0001f;
+    [SerializeField] private float speed = 3f;
     private Vector2 mouseInput;
     private Vector2 prevMousePos;
 
@@ -17,14 +18,17 @@ public class PipeRootControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HandleInput();
-        UpAndDownMovement();
+        if (GameManager.Instance.IsGameRunning())
+        {
+            HandleInput();
+            UpAndDownMovement();
+        }
     }
 
     void UpAndDownMovement()
     {
         var pos = this.transform.position;
-        pos += (Vector3)(Vector2.up * mouseInput*sensitivity);
+        pos += (Vector3)(Vector2.up * mouseInput*speed*sensitivity);
         pos.y = Mathf.Clamp(pos.y, -0.5f, 1);
         transform.position = pos;
     }
