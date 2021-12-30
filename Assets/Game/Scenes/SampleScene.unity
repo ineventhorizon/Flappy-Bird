@@ -390,10 +390,10 @@ RectTransform:
   m_Father: {fileID: 1469976635}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -414, y: -42}
-  m_SizeDelta: {x: 249, y: -1554}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 30, y: -62}
+  m_SizeDelta: {x: 262.695, y: 94.06799}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &222463998
 MonoBehaviour:
@@ -1113,10 +1113,10 @@ RectTransform:
   m_Father: {fileID: 1469976635}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -141, y: -42}
-  m_SizeDelta: {x: 105, y: -1554}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 292.7, y: -49.400024}
+  m_SizeDelta: {x: 113.98901, y: 119.42798}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &811249883
 MonoBehaviour:
@@ -1363,10 +1363,10 @@ RectTransform:
   m_Father: {fileID: 209388098}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -0.000015259, y: -338}
-  m_SizeDelta: {x: 408.25, y: -1390.129}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.000022888, y: -338}
+  m_SizeDelta: {x: 486.049, y: 209.651}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1006012506
 MonoBehaviour:
@@ -1949,9 +1949,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02b52698efb99de489d60eb84beab5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
+  speed: 1.5
   height: 0.1
-  rb: {fileID: 1402225427}
 --- !u!95 &1402225426
 Animator:
   serializedVersion: 3
@@ -2781,8 +2780,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -185}
-  m_SizeDelta: {x: 391.9, y: -1399.526}
+  m_AnchoredPosition: {x: -0.0000076294, y: -158}
+  m_SizeDelta: {x: 347.893, y: -1229.367}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1931971567293136957
 GameObject:
@@ -3019,7 +3018,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1984410752083752965, guid: c0d39c205ae7a674aa7b8447cc6fc8c4, type: 3}
       propertyPath: speed
-      value: 1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1984410752083752965, guid: c0d39c205ae7a674aa7b8447cc6fc8c4, type: 3}
       propertyPath: sensitivity

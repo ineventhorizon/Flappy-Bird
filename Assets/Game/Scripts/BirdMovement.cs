@@ -7,14 +7,9 @@ public class BirdMovement : MonoBehaviour
 {
     [SerializeField] private float speed;
     [SerializeField] private float height;
-    [SerializeField] Rigidbody2D rb;
-    void Start()
-    {
-        //Application.targetFrameRate = 30;
-    }
     void Update()
     {
-        MoveUpAndDown();
+       MoveUpAndDown();
     }
 
 
@@ -22,11 +17,11 @@ public class BirdMovement : MonoBehaviour
     {
         //float y = Mathf.PingPong(Time.time*coefficient, height);
         float y = Mathf.Sin(Time.time*speed)*height;
-        var tempPos = rb.position;
+        var tempPos = transform.position;
         tempPos.y = y;
-        rb.position = tempPos;
+        transform.position = tempPos;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         Observer.updateScore?.Invoke(1);
     }
